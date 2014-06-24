@@ -1,0 +1,23 @@
+<head>
+  <title>merge-box</title>
+</head>
+
+<body>
+  <div style="float:right">{{> loginButtons align="right"}}</div>
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+  <ul>
+  {{#each users}}
+  	{{>user}}
+  {{/each}}
+  </ul>
+</template>
+
+<template name="user">
+	<li> {{emails.[0].address}}</li>
+</template>
