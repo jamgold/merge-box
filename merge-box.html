@@ -10,10 +10,18 @@
 <template name="hello">
   <h1>Hello World!</h1>
   {{greeting}}
-  <input type="button" value="Click" />
+  <span class="{{subscribed_others}}">Subscribed Others</span>
+  <!--input type="button" value="Populate Others" /-->
+  <h2>Users</h2>
   <ul>
   {{#each users}}
   	{{>user}}
+  {{/each}}
+  </ul>
+  <h2>Others</h2>
+  <ul>
+  {{#each others}}
+    {{>user}}
   {{/each}}
   </ul>
 </template>
